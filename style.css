@@ -1,0 +1,512 @@
+/* ======================================== */
+/* ====== 1. BASE AND GENERAL STYLES ====== */
+/* ======================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 800; /* Extra bold for a professional sports feel */
+    letter-spacing: -0.02em; /* Slightly tighter letters—a classic 'Inter' design trick */
+}
+
+/* Base button style (used for contact form and Join the Team) */
+.btn-primary {
+    display: inline-block;
+    background-color: #9b4dca; /* Purple */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #6a0dad; /* Darker purple on hover */
+}
+
+/* --- GENERAL CONTENT CONTAINER (The white box on most pages) --- */
+.content-section {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Added subtle shadow */
+}
+
+/* Prevents text selection across the page */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Standard */
+}
+
+/* Specifically prevents images from being dragged */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+
+/* ======================================== */
+/* ====== 2. NAVIGATION BAR (HEADER) ====== */
+/* ======================================== */
+
+.navbar {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Wrapper for Logo Icon and Logo Text (NEW) */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    filter: invert(100%);
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Highlight the current page in the menu */
+.nav-links a:hover,
+.navbar a.active {
+    color: #9b4dca; /* Purple */
+    border-bottom: 2px solid #9b4dca;
+}
+
+
+/* ================================================= */
+/* ====== 3. HERO SECTIONS (Page Top Banners) ====== */
+/* ================================================= */
+
+.hero {
+    /* Step 1: Add a placeholder for a background image */
+    /* Replace 'images/header-bg.jpg' with a real photo later! */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(75,0,130,0.7)), url('images/athena-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect makes it feel high-end */
+
+    color: white;
+    padding: 15px 20px; /* Reduced padding significantly from 30px */
+    border-bottom: 2px solid #9b4dca; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px; /* Much smaller minimum height */
+}
+
+/* Make the title tighter and more modern */
+.hero h1 {
+    margin: 0;
+    font-size: 4.0rem; /* Slightly smaller for a more 'integrated' look */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+/* Slim down the sub-text */
+.hero p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    font-style: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Styling for the large logo on the Home Page */
+.team-logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #9b4dca;
+    margin-bottom: 20px;
+    /* Consolidating team-logo styles */
+    filter: drop-shadow(0 0 0 white) brightness(1.1);
+}
+
+
+/* ======================================== */
+/* ====== 4. FOOTER AND SOCIAL ICONS ====== */
+/* ======================================== */
+
+.footer {
+    /* Keeping the Pro background style */
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(75,0,130,0.7)), url('images/pitch.png');
+    background-size: cover;
+    background-position: center;
+    
+    color: #fff;
+    text-align: center;
+    padding: 15px 0 10px 0;
+    margin-top: 30px;
+    width: 100%;
+    
+    border-top: 3px solid #9b4dca; 
+}
+
+.footer p {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+/* Social Icon Container */
+.social-links {
+    margin-bottom: 5px;
+}
+
+/* Enhancing the Icons */
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #9b4dca;
+    transform: translateY(-3px);
+}
+
+
+/* ========================================== */
+/* ====== 5. SQUAD PAGE STYLES (Cards) ====== */
+/* ========================================== */
+
+/* --- Apply background image to the content section --- */
+.squad-page-background {
+    background-image: url('images/athena_stadium.png');
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0; 
+    background-attachment: fixed;
+}
+.content-section.squad-page-background {
+    background-color: transparent;
+    box-shadow: none;
+    max-width: 1000px;
+}
+
+/* --- Make H3 position headings readable --- */
+.content-section.squad-page-background h3 {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.squad-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.player-card {
+    background-color: white; /* KEEP PLAYER CARDS WHITE */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.player-card img {
+    width: 120px;       /* 1. Set a fixed width */
+    height: 120px;      /* 2. Set the same fixed height to make it a square */
+    object-fit: cover;  /* 3. The magic line: Fills the square, cropping if needed, without stretching */
+    border-radius: 50%; /* 4. Makes the square image into a perfect circle */
+    margin-bottom: 5px; /* Keeps the tight spacing you liked */
+}
+
+
+/* ============================================ */
+/* ====== 6. FIXTURES STYLES (Accordion) ====== */
+/* ============================================ */
+
+.fixture-list {
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Header Row */
+.fixture-list-header {
+    display: flex;
+    background-color: #6a0dad;
+    color: white;
+    font-weight: bold;
+}
+.fixture-list-header div {
+    padding: 15px;
+    text-align: left;
+    flex-basis: 20%; 
+}
+.fixture-list-header div:nth-child(2) { flex-basis: 30%; } 
+.fixture-list-header div:nth-child(3) { flex-basis: 15%; } 
+.fixture-list-header div:nth-child(4) { flex-basis: 15%; } 
+.fixture-list-header div:nth-child(5) { flex-basis: 20%; } 
+
+/* Detail Row */
+.fixture-details {
+    border-bottom: 1px solid #eee;
+    background-color: white;
+}
+.fixture-details summary {
+    display: flex; 
+    list-style: none; 
+    cursor: pointer;
+    padding: 0; 
+    font-weight: normal;
+    transition: background-color 0.2s;
+}
+.fixture-details summary span {
+    padding: 15px;
+    text-align: left;
+    flex-basis: 20%;
+}
+.fixture-details summary span:nth-child(2) { flex-basis: 30%; }
+.fixture-details summary span:nth-child(3) { flex-basis: 15%; }
+.fixture-details summary span:nth-child(4) { flex-basis: 15%; }
+.fixture-details summary span:nth-child(5) { flex-basis: 20%; }
+
+/* Inner Dropdown */
+.match-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #6a0dad;
+}
+.match-info h4 { color: #6a0dad; margin-top: 0; }
+.map-placeholder { 
+    height: 150px; 
+    background-color: #ccc; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #333; 
+    font-size: 0.9rem; 
+    margin-top: 10px; 
+    overflow: hidden; /* Fix for embedded map */
+}
+
+/* Results and Hover */
+.result { font-weight: bold; }
+.win { color: green; }
+.lose { color: red; }
+.draw { color: orange; }
+.cancelled { color: grey; font-style: italic; }
+.fixture-details summary:hover {
+    background-color: #f3e5f5; 
+}
+
+
+/* ======================================= */
+/* ====== 7. COACHES STYLES (Cards) ====== */
+/* ======================================= */
+
+.coach-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px; 
+    padding: 40px 20px;
+}
+
+.coach-card {
+    background-color: #fff;
+    border: 1px solid #efefef;
+    border-radius: 16px;
+    width: 300px;
+    /* This padding is the secret: it keeps the image away from the edges */
+    padding: 24px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.coach-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+
+.coach-photo {
+    width: 100%;        /* Scales to fit the padded card */
+    max-width: 220px;   /* Prevents it from getting too huge */
+    height: 220px;      /* Keeps it a perfect square */
+    object-fit: cover;
+    border-radius: 12px; /* Soft "modern" corners */
+    /* A very subtle "hairline" border */
+    border: 1px solid #f0f0f0; 
+    margin-bottom: 20px;
+}
+
+.coach-info {
+    text-align: center;
+}
+
+/* Professional, understated name text */
+.coach-card h3 {
+    color: #1a1a1a;
+    font-size: 1.15rem; /* Small and sleek */
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.01em;
+}
+
+/* Purposeful Role Text */
+.coach-card h4 {
+    color: #9b4dca; 
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 16px;
+}
+
+.coach-card p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+
+/* ======================================= */
+/* ======= 8. CONTACT FORM STYLES ======== */
+/* ======================================= */
+
+/* Container Setup */
+.form-group {
+    margin-bottom: 30px; 
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Input/Textarea Styling (Ensure fields are clearly visible) */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Label as Placeholder (Absolute positioning inside the field space) */
+.contact-form label {
+    position: absolute; 
+    top: 13px;
+    left: 10px; 
+    
+    font-weight: bold; 
+    color: #888; 
+    pointer-events: none; 
+    transition: all 0.5s ease; 
+    
+    opacity: 0;
+    z-index: 10;
+}
+
+/* The Magic: Label floats when input is focused or HAS CONTENT */
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+    top: -12px; /* Adjusted slightly to sit perfectly above the input */
+    left: 5px; 
+    font-size: 0.75rem; 
+    color: #9b4dca; 
+    opacity: 1; /* Makes the label visible */
+    background-color: white; 
+    padding: 0 5px; 
+}
+
+
+/* Hide the actual HTML placeholder when not focused */
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    color: transparent;
+}
+
+
+/* Focus/Active Styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #9b4dca; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(155, 77, 202, 0.5); 
+    background-color: white; 
+}
+
+/* Animation for the success message appearing */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#success-message {
+    text-align: center;
+}
+
