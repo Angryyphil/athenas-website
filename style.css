@@ -598,3 +598,56 @@ img {
     text-align: center;
 }
 
+
+/* ======================================== */
+/* ====== 9. MOBILE RESPONSIVENESS ======== */
+/* ======================================== */
+
+@media (max-width: 768px) {
+    /* 1. Fix Navigation Layout */
+    .navbar {
+        flex-direction: column; /* Stacks logo on top of links */
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Tighter spacing for links on phones */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+
+    /* 2. Fix Hero Overlap and Font Size */
+    .hero {
+        padding: 60px 20px 40px 20px; /* Adds space at the top so it won't overlap the nav */
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Shrinks the massive text so it doesn't wrap awkwardly */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Make the logo stack smaller on phones so it fits the screen */
+    .logo-oval.front {
+        width: 140px;
+        height: 190px;
+    }
+
+    .logo-oval.back {
+        width: 110px;
+        height: 140px;
+    }
+
+    .logo-oval.left { transform: translateX(-90px); }
+    .logo-oval.right { transform: translateX(90px); }
+}
