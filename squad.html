@@ -31,124 +31,71 @@
     <header class="hero" style="height: 200px; padding: 40px;">
         <h1>Our Squad</h1>
         <p>Meet the current Athena's</p>
+
+        <div class="team-toggle-container">
+            <button id="btn-u8" class="toggle-btn" onclick="showTeam('u8')">U8's</button>
+            <button id="btn-u9" class="toggle-btn active" onclick="showTeam('u9')">U9's</button>
+        </div>
     </header>
 
 <section class="content-section squad-page-background">
 
+    <div id="team-u9">
         <h3 style="text-align: center; margin-top: 40px; color: #333;">Goalkeepers</h3>
-        
         <div class="squad-grid">
-            <div class="player-card goalkeeper">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Goalkeeper #1</h4> <p>Goalkeeper</p>
-            </div>
-            
-            <div class="player-card goalkeeper">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Goalkeeper #2</h4> <p>Goalkeeper</p>
-            </div>
+            <div class="player-card goalkeeper"><img src="images/athena-logo.png" alt="Player Photo"><h4>Goalkeeper #1</h4> <p>Goalkeeper</p></div>
+            <div class="player-card goalkeeper"><img src="images/athena-logo.png" alt="Player Photo"><h4>Goalkeeper #2</h4> <p>Goalkeeper</p></div>
         </div>
-
 
         <h3 style="text-align: center; margin-top: 40px; color: #333;">Defenders</h3>
-
         <div class="squad-grid">
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #1</h4> <p>Defender</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #2</h4> <p>Defender</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #3</h4> <p>Defender</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #4</h4> <p>Defender</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #5</h4> <p>Defender</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Defender #6</h4> <p>Defender</p>
-            </div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #1</h4> <p>Defender</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #2</h4> <p>Defender</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #3</h4> <p>Defender</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #4</h4> <p>Defender</p></div>
         </div>
 
-
         <h3 style="text-align: center; margin-top: 40px; color: #333;">Midfielders</h3>
-
         <div class="squad-grid">
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #1</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #2</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #3</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #4</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #5</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #6</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #7</h4> <p>Midfielder</p>
-            </div>
-
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                <h4>Midfielder #8</h4> <p>Midfielder</p>
-            </div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #1</h4> <p>Midfielder</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #2</h4> <p>Midfielder</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #3</h4> <p>Midfielder</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #4</h4> <p>Midfielder</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #5</h4> <p>Midfielder</p></div>
         </div>
 
         <h3 style="text-align: center; margin-top: 40px; color: #333;">Strikers</h3>
-
         <div class="squad-grid">
-            <div class="player-card">
-                <img src="images/AW.png" alt="Player Photo">
-                    <h4>Ashleigh</h4> <p>Striker</p>
-            </div>
+            <div class="player-card"><img src="images//aw.png" alt="Player Photo"><h4>Ash</h4> <p>Striker</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Striker #2</h4> <p>Striker</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Striker #3</h4> <p>Striker</p></div>
+        </div>
+    </div>
 
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                    <h4>Striker #2</h4> <p>Striker</p>
-            </div>
+    <div id="team-u8" style="display: none;">
+        <h3 style="text-align: center; margin-top: 40px; color: #333;">Goalkeepers</h3>
+        <div class="squad-grid">
+        <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Goalkeeper</h4> <p>Goalkeeper #1</p></div>
+    </div>
 
-            <div class="player-card">
-                <img src="images/athena-logo.png" alt="Player Photo">
-                    <h4>Striker #3</h4> <p>Striker</p>
-            </div>
+    <h3 style="text-align: center; margin-top: 40px; color: #333;">Defenders</h3>
+    <div class="squad-grid">
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #1</h4> <p>Defender</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Defender #2</h4> <p>Defender</p></div>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 40px; color: #333;">Midfielders</h3>
+        <div class="squad-grid">
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #1</h4> <p>Midfielder</p></div>
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Midfielder #2</h4> <p>Midfielder</p></div>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 40px; color: #333;">Strikers</h3>
+        <div class="squad-grid">
+            <div class="player-card"><img src="images/athena-logo.png" alt="Player Photo"><h4>Striker #1</h4> <p>Striker</p></div>
         </div>
 
-    </section>
+</section>
 
     <footer class="footer">
             <div class="social-links">
@@ -163,6 +110,27 @@
     <b><a href="privacy.html" style="color: #9b4dca; text-decoration: none;">Privacy Policy</a></b>
     </footer>
 
+    <script>
+    function showTeam(teamId) {
+        const u8Section = document.getElementById('team-u8');
+        const u9Section = document.getElementById('team-u9');
+        const u8Btn = document.getElementById('btn-u8');
+        const u9Btn = document.getElementById('btn-u9');
+
+        if (teamId === 'u8') {
+            u8Section.style.display = 'block';
+            u9Section.style.display = 'none';
+            u8Btn.classList.add('active');
+            u9Btn.classList.remove('active');
+        } else {
+            u8Section.style.display = 'none';
+            u9Section.style.display = 'block';
+            u9Btn.classList.add('active');
+            u8Btn.classList.remove('active');
+        }
+    }
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>

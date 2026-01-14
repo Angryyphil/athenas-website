@@ -159,15 +159,67 @@ img {
     letter-spacing: 0.5px;
 }
 
-/* Styling for the large logo on the Home Page */
-.team-logo {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #9b4dca;
-    margin-bottom: 20px;
-    /* Consolidating team-logo styles */
-    filter: drop-shadow(0 0 0 white) brightness(1.1);
+/* --- HERO SECTION LOGO STACK (V2 - Containers) --- */
+
+/* The main container holding the stack */
+.hero-logo-stack {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Fixed height to contain the stack */
+    margin: 30px auto; /* Spacing above and below */
+}
+
+/* --- THE UNIFORM OVAL CONTAINERS --- */
+/* This defines the shape and look for ALL three bubbles */
+.logo-oval {
+    position: absolute; /* Allows them to overlap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* SOLID WHITE background fixes checkerboard */
+    border: 4px solid #6a0dad; /* The lovely purple border */
+    border-radius: 50%; /* Forces the oval shape */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Adds depth */
+    overflow: hidden; /* Keeps images inside the oval */
+}
+
+/* Ensure images fit nicely inside their ovals */
+.logo-oval img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* --- SIZING AND LAYERING --- */
+
+/* The Front (Athena) Oval */
+.logo-oval.front {
+    z-index: 10; /* On top */
+    width: 175px; /* Reduced size */
+    height: 250px; /* Taller than wide creates the oval */
+}
+
+/* The Back (Side) Ovals */
+.logo-oval.back {
+    z-index: 5; /* Behind */
+    width: 140px; /* Slightly smaller than the front one */
+    height: 180px; /* Matching aspect ratio */
+    opacity: 0.9; /* Slight transparency for depth */
+    background-color: #f8f8f8; /* Ever so slightly off-white to differentiate */
+}
+
+/* --- POSITIONING --- */
+
+/* Move left oval out */
+.logo-oval.left {
+    transform: translateX(-130px);
+}
+
+/* Move right oval out */
+.logo-oval.right {
+    transform: translateX(130px);
 }
 
 
@@ -270,6 +322,42 @@ img {
     object-fit: cover;  /* 3. The magic line: Fills the square, cropping if needed, without stretching */
     border-radius: 50%; /* 4. Makes the square image into a perfect circle */
     margin-bottom: 5px; /* Keeps the tight spacing you liked */
+}
+
+.team-toggle-container {
+    text-align: center;
+    margin: 20px 0 30px 0; /* Adjusted margins for the Hero section */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.toggle-btn {
+    display: inline-block;
+    /* Match .btn-primary colors and shapes */
+    background-color: transparent; 
+    color: #ffffff;
+    padding: 10px 25px;
+    border: 2px solid #ffffff; /* White border to stand out against Hero bg */
+    border-radius: 5px; /* Match .btn-primary radius */
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* When active or hovered, it becomes the solid Purple from your .btn-primary */
+.toggle-btn.active, .toggle-btn:hover {
+    background-color: #9b4dca; 
+    border-color: #9b4dca;
+    color: #ffffff;
+    transform: translateY(-2px); /* Subtle lift like a pro sports site */
+}
+
+/* When you hover over the already active button, make it the darker purple */
+.toggle-btn.active:hover {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
 }
 
 
